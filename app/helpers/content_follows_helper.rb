@@ -1,0 +1,2 @@
+module ContentFollowsHelper
+end
