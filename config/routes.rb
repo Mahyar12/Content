@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
   resources :articles_tags
   resources :articles_categories
   resources :roles_users
@@ -15,5 +16,6 @@ Rails.application.routes.draw do
   resources :comments
   resources :articles
   resources :users
+  root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
