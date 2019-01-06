@@ -1,29 +1,38 @@
-<h2>Sign up</h2>
+<div class="splash-container ">
+        <div class="card <%= 'rtl' if I18n.locale.to_s == 'fa' %>" style="width: 350px">
+            <div class="card-header text-center">
+                <h3 class="mb-1"><%= t(:registration_form) %></h3>
+                <p><%= t(:login_notice) %></p>
+            </div>
+            <div class="card-body">
+                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+            
+                <div class="form-group">            
+                       <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: t(:email), class: "form-control form-control-lg" %>
+                </div>
+                <div class="form-group">
+                  <% if @minimum_password_length %>
+                  <em>(<%= @minimum_password_length%> <%=  t(:minimum_password_length) %> )</em>
+                  <% end %><br />
+                  <%= f.password_field :password, autocomplete: "new-password", placeholder: t(:password), class: "form-control form-control-lg" %>
+                </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+                <div class="form-group">
+                  <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: t(:password_confirmation), class: "form-control form-control-lg" %>
+                </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+                <div class="form-group">
+                  <div class="form-group pt-2">
+                    <%= f.submit t(:sign_up), class: "btn btn-block btn-primary" %>
+                  </div>
+                </div>   
+                  <% end %> 
+              </div>                             
+              <div class="card-footer bg-white">
+                  <p><%= t(:already_enrolled) %> <a href="/users/login" class="text-secondary"><%= t(:login) %></a></p>
+              </div>
+      </div>
+</div>  
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>

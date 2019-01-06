@@ -1,0 +1,138 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  src: font-url("fa-brands-400.eot");
+  src: font-url("fa-brands-400d41d.eot?#iefix") format("embedded-opentype"), font-url("fa-brands-400.html") format("woff2"), font-url("fa-brands-400.woff") format("woff"), font-url("fa-brands-400.ttf") format("truetype"), font-url("fa-brands-400.svg#fontawesome") format("svg"); }
+
+.fab {
+  font-family: 'Font Awesome 5 Brands'; }
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  src: font-url("fa-regular-400.eot");
+  src: font-url("fa-regular-400d41d.eot?#iefix") format("embedded-opentype"), font-url("fa-regular-400.html") format("woff2"), font-url("fa-regular-400.woff") format("woff"), font-url("fa-regular-400.ttf") format("truetype"), font-url("fa-regular-400.svg#fontawesome") format("svg"); }
+
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400; }
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  src: font-url("fa-solid-900.eot");
+  src: font-url("fa-solid-900d41d.eot?#iefix") format("embedded-opentype"), font-url("fa-solid-900.html") format("woff2"), font-url("fa-solid-900.woff") format("woff"), font-url("fa-solid-900.ttf") format("truetype"), font-url("fa-solid-900.svg#fontawesome") format("svg"); }
+
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; }
+
+  @font-face{
+  	font-family:"Material Design Icons";
+  	src:font-url("materialdesignicons-webfontdc99.eot?v=1.8.36");
+  	src:font-url("materialdesignicons-webfontd41d.eot?#iefix&v=1.8.36") format("embedded-opentype"),font-url("materialdesignicons-webfontdc99.html?v=1.8.36") format("woff2"),font-url("materialdesignicons-webfontdc99.woff?v=1.8.36") format("woff"),font-url("materialdesignicons-webfontdc99.ttf?v=1.8.36") format("truetype"),font-url("materialdesignicons-webfontdc99.svg?v=1.8.36#materialdesigniconsregular") format("svg");font-weight:normal;font-style:normal
+  }
+
+@font-face {
+  font-family: 'simple-line-icons';
+  src: font-url('Simple-Line-Icons4c82.eot?-i3a2kk');
+  src: font-url('Simple-Line-Iconsd41d.eot?#iefix-i3a2kk') format('embedded-opentype'), font-url('Simple-Line-Icons4c82.ttf?-i3a2kk') format('truetype'), font-url('Simple-Line-Icons4c82.html?-i3a2kk') format('woff2'), font-url('Simple-Line-Icons4c82.woff?-i3a2kk') format('woff'), font-url('Simple-Line-Icons4c82.svg?-i3a2kk#simple-line-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: 'themify';
+	src:font-url('themify9f24.eot?-fvbane');
+	src:font-url('themifyd41d.eot?#iefix-fvbane') format('embedded-opentype'),
+		font-url('themify.woff') format('woff'),
+		font-url('themify.ttf') format('truetype'),
+		font-url('themify9f24.svg?-fvbane#themify') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: 'weathericons';
+	src:font-url('weathericons-regular-webfont.eot');
+	src:font-url('weathericons-regular-webfont.eot?#iefix') format('embedded-opentype'),font-url('weathericons-regular-webfont.woff2') format('woff2'),font-url('weathericons-regular-webfont.woff') format('woff'),font-url('weathericons-regular-webfont.ttf') format('truetype'),font-url('weathericons-regular-webfont.svg#weather_iconsregular') format('svg');font-weight:400;font-style:normal
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 900;
+  src: font-url('IRANSansWeb(FaNum)_Black.eot');
+  src: font-url('IRANSansWeb(FaNum)_Black.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+     font-url('IRANSansWeb(FaNum)_Black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+     font-url('IRANSansWeb(FaNum)_Black.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     font-url('IRANSansWeb(FaNum)_Black.ttf') format('truetype');
+}
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: bold;
+  src: font-url('IRANSansWeb(FaNum)_Bold.eot');
+  src: font-url('IRANSansWeb(FaNum)_Bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+     font-url('IRANSansWeb(FaNum)_Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+     font-url('IRANSansWeb(FaNum)_Bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     font-url('IRANSansWeb(FaNum)_Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 500;
+  src: font-url('IRANSansWeb(FaNum)_Medium.eot');
+  src: font-url('IRANSansWeb(FaNum)_Medium.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+     font-url('IRANSansWeb(FaNum)_Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+     font-url('IRANSansWeb(FaNum)_Medium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     font-url('IRANSansWeb(FaNum)_Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 300;
+  src: font-url('IRANSansWeb(FaNum)_Light.eot');
+  src: font-url('IRANSansWeb(FaNum)_Light.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+     font-url('IRANSansWeb(FaNum)_Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+     font-url('IRANSansWeb(FaNum)_Light.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     font-url('IRANSansWeb(FaNum)_Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 200;
+  src: font-url('IRANSansWeb(FaNum)_UltraLight.eot');
+  src: font-url('IRANSansWeb(FaNum)_UltraLight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+     font-url('IRANSansWeb(FaNum)_UltraLight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+     font-url('IRANSansWeb(FaNum)_UltraLight.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     font-url('IRANSansWeb(FaNum)_UltraLight.ttf') format('truetype');
+}
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: normal;
+  src: font-url('IRANSansWeb(FaNum).eot');
+  src: font-url('IRANSansWeb(FaNum).eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+     font-url('IRANSansWeb(FaNum).woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+     font-url('IRANSansWeb(FaNum).woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     font-url('IRANSansWeb(FaNum).ttf') format('truetype');
+}

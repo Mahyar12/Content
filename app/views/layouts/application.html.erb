@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html >
   <head>
     <title>Content</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>  
+    
   </head>
 
   <body>
-  	<p class="notice"><%= notice %></p>
-  	<p class="alert"><%= alert %></p>
-
+  	<% if notice.present? %>
+	  <p class="flash alert alert-success <%= 'rtl' if I18n.locale.to_s == 'fa' %>" >
+	  	<span class="dismiss">X </span><%= t(notice) %></p>
+	<% end %>
+	<% if alert.present? %>
+	  <p class="flash alert alert-danger <%= 'rtl' if I18n.locale.to_s == 'fa' %>">
+	  	<span class="dismiss">X </span><%= t(alert) %></p>
+	<% end %>
     <%= yield %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>

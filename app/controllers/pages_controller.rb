@@ -1,6 +1,13 @@
 class PagesController < ApplicationController
   layout 'application', :except => [:home, :social_home]
 
+  def dashboard
+    @title = t(:dashboard)
+    @main_menu = t(:dashboard)
+    @current_user = current_user
+    render layout: 'dashboard'
+  end
+
   def home
     @menu = 'home'
     render layout: 'application'

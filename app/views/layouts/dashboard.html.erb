@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html dir="<%= 'rtl' if I18n.locale.to_s == 'fa' %>">
+  <%= render 'layouts/dashboard_header' %>
+  <body class="<%= 'rtl' if I18n.locale.to_s == 'fa' %>">
+    <div class="dashboard-main-wrapper">
+      <%= render 'layouts/dashboard_nav_top' %>
+      <%= render 'layouts/dashboard_nav_side' %>
+      <div class="dashboard-wrapper">
+        <div class="dashboard-ecommerce">
+          <div class="container-fluid dashboard-content ">            
+
+            <% if notice.present? %>
+              <p class="flash alert alert-success <%= 'rtl' if I18n.locale.to_s == 'fa' %>" >
+                <span class="dismiss">X </span><%= t(notice) %></p>
+            <% end %>
+            <% if alert.present? %>
+              <p class="flash alert alert-danger <%= 'rtl' if I18n.locale.to_s == 'fa' %>">
+                <span class="dismiss">X </span><%= t(alert) %></p>
+            <% end %>
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                  <div class="page-header">
+                      <h2 class="pageheader-title"><%= @title %></h2>
+                      <div class="page-breadcrumb">
+                          <nav aria-label="breadcrumb">
+                              <ol class="breadcrumb">
+                                  <li class="breadcrumb-item"><a href="#" class="breadcrumb-link"><%= @main_menu %></a></li>
+                                  <% if @submenu %>
+                                    <li class="breadcrumb-item active" aria-current="page"><%= @submenu %></li>
+                                  <% end %>
+                              </ol>
+                          </nav>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="ecommerce-widget">
+              <%= yield %>    
+            </div>
+          </div>
+        </div>
+        <%= render 'layouts/dashboard_footer' %>
+      </div>
+    </div>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </body>
+</html>
