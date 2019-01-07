@@ -23,6 +23,7 @@ fa:
   editorial: "ویراستاری"
   user_management: "مدیریت کاربران"
   access_control: "مدیریت دسترسی‌ها"
+  menu: "منو"
   devise:
     confirmations:
       confirmeمd: "ایمیل شما با موفقیت تایید شد."

@@ -8,29 +8,29 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav flex-column">
                             <li class="nav-divider">
-                                Menu
+                                <%= t(:menع) %>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link active" href="/dashboard"><i class="fa fa-fw fa-user-circle"></i><%= t(:dashboard) %></a>                                
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" ><i class="fas fa-fw fa-chart-pie"></i><%= t(:user_management) %></a>
+                                <a class="nav-link" href="/user_management" ><i class="fas fa-fw fa-chart-pie"></i><%= t(:user_management) %></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" ><i class="fas fa-fw fa-chart-pie"></i><%= t(:access_control) %></a>
+                                <a class="nav-link" href="access_control_management" ><i class="fas fa-fw fa-chart-pie"></i><%= t(:access_control) %></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fab fa-fw fa-wpforms"></i><%= t(:content_managment) %></a>
                                 <div id="submenu-2" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/general.html"><%= t(:add_content) %></a>
+                                            <a class="nav-link" href="/add_content"><%= t(:add_content) %></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/cards.html"><%= t(:my_contents) %></a>
+                                            <a class="nav-link" href="/my_contents"><%= t(:my_contents) %></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/carousel.html"><%= t(:editorial) %></a>
+                                            <a class="nav-link" href="/editorial"><%= t(:editorial) %></a>
                                         </li>                                        
                                     </ul>
                                 </div>

@@ -110,3 +110,9 @@
 .rtl .nav-user-info {
     text-align: center;
 }
+
+.rtl .page-breadcrumb .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  padding-left: .5rem;
+  padding-right: .5rem;
+  content: "\f104";
+}
