@@ -10,4 +10,6 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require dashboard/modernizr-custom.js
+//= require dashboard/classie.js
 //= require_tree ./dashboard

@@ -25,13 +25,27 @@ class RolesController < ApplicationController
   # POST /roles.json
   def create
     @role = Role.new(role_params)
+    Rails.application.eager_load!
+    @models = ActiveRecord::Base.descendants
+    @models.delete_at(0)
+    @models.delete_at(0)
+    @models.each do |model| 
+      if(model.name != Permission)
+        # model.column_names.each do |column| 
+          p = @role.permissions.new
+          p.access = 0000
+          p.attrs = ""
+          p.concept_name = model.name
+        # end
+      end
+    end
 
     respond_to do |format|
       if @role.save
-        format.html { redirect_to @role, notice: 'Role was successfully created.' }
+        format.html { redirect_to :show, notice: 'Role was successfully created.' }
         format.json { render :show, status: :created, location: @role }
       else
-        format.html { render :new }
+        format.html { redirect_to  :new }
         format.json { render json: @role.errors, status: :unprocessable_entity }
       end
     end

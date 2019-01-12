@@ -1,15 +1,34 @@
 <p id="notice"><%= notice %></p>
+<div id="somedialog" class="dialog dialog--close">
+  <div class="dialog__overlay"></div>
+  <div class="dialog__content box">
+    <div class="morph-shape">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="55%" viewBox="0 0 560 280" preserveAspectRatio="none">
+        <rect x="3" y="3" fill="none" width="556" height="276"></rect>
+      </svg>
+    </div>
+    <div class="dialog-inner">
 
+   
+      <h4 id="logintoregister"><%= t(:add_role) %><br></h4>
+      <%= render 'roles/form', role: @role %>
+
+      <div><button class="action" style="visibility: hidden;" data-dialog-close="a">Close</button></div>
+    </div>
+  </div>
+</div> 
 <div class="row">
   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
     <div class="card"> 
-      <h5 class="card-header"><%= t(:roles) %></h5>
+      <h5 class="card-header"><%= t(:roles) %><a data-dialog="somedialog" href="javascript:void(0)" id="add-role" class="add-item"><i class="fa fa-plus"> </i> </a></h5>
       <div class="card-body">       
         <table id="roles"
            data-toggle="table"
            data-height="500"
            data-pagination="false"
            data-search="true"
+           data-single-select="true"
+           data-click-to-select="true"
           >
           <thead>
           <tr>
@@ -22,7 +41,7 @@
   </div>
   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
     <div class="card"> 
-      <h5 class="card-header"><%= t(:segments) %></h5>
+      <h5 class="card-header" ><%= t(:segments) %></h5>      
       <div class="card-body">       
         <table id="models"
            data-toggle="table"
@@ -50,7 +69,7 @@
           >
           <thead>
           <tr>
-            <th data-field="name">Name</th>
+            <th data-field="concept_name">Name</th>
            
             <th data-field="action" data-formatter="accessFormatter" data-events="accessEvents"><center><i class="fas fa-edit" style="font-size: 15px;"></i>دسترسی‌ها </center></th>
 

@@ -143,3 +143,15 @@
 .rtl .bootstrap-table td a.active{
   color: #ff407b;
 }
+
+.rtl .add-item{
+  position: absolute;
+  top: 13px;
+  left: 15px;
+}
+
+.add-item{
+  position: absolute;
+  top: 13px;
+  right: : 15px;
+}

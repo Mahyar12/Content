@@ -19,13 +19,13 @@ class DashboardsController < ApplicationController
     @title = t(:access_control)
     @main_menu = t(:access_control)
     @current_user = current_user
-    Rails.application.eager_load!
-    @models = ActiveRecord::Base.descendants
-    @models.delete_at(0)
-    @models.delete_at(0)
-    @roles = Role.all
-    @users = User.all    
-    
+    # Rails.application.eager_load!
+    # @models = ActiveRecord::Base.descendants
+    # @models.delete_at(0)
+    # @models.delete_at(0)
+    # @roles = Role.all
+    # @users = User.all    
+    @role = Role.new
   end
 
   def get_models

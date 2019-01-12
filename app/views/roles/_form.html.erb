@@ -12,16 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id, id: :role_user_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :name %>
+    <%= form.label t(:name) %>
     <%= form.text_field :name, id: :role_name %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit t(:add_role) %>
   </div>
 <% end %>

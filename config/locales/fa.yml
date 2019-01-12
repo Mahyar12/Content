@@ -28,6 +28,10 @@ fa:
   accesses: "دسترسی‌ها"
   name: "نام"
   menu: "منو"
+  add_role: "افزودن نقش"
+  add_content: "افزودن محتوا"
+  abstract: "چکیده"
+  content: "متن کامل"
   devise:
     confirmations:
       confirmeمd: "ایمیل شما با موفقیت تایید شد."
