@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+    <div class="card"> 
+      <h5 class="card-header"><%= t(:roles) %></h5>
+      <div class="card-body">       
+        <table id="roles"
+           data-toggle="table"
+           data-height="500"
+           data-pagination="false"
+           data-search="true"
+          >
+          <thead>
+          <tr>
+            <th data-field="name">Name</th>
+          </tr>
+          </thead>  
+        </table>  
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+    <div class="card"> 
+      <h5 class="card-header"><%= t(:segments) %></h5>
+      <div class="card-body">       
+        <table id="models"
+           data-toggle="table"
+           data-height="500"
+           data-pagination="false"
+           data-search="true"
+          >
+          <thead>
+          <tr>
+            <th data-field="name">Name</th>
+          </tr> 
+        </table>  
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+    <div class="card"> 
+      <h5 class="card-header"><%= t(:accesses) %></h5>
+      <div class="card-body">       
+        <table id="accesses"
+           data-toggle="table"
+           data-height="500"
+           data-pagination="false"
+           data-search="true"
+          >
+          <thead>
+          <tr>
+            <th data-field="name">Name</th>
+           
+            <th data-field="action" data-formatter="accessFormatter" data-events="accessEvents"><center><i class="fas fa-edit" style="font-size: 15px;"></i>دسترسی‌ها </center></th>
+
+          </tr>
+          </thead>  
+        </table>  
+      </div>
+    </div>
+  </div>
+</div>
+
+<% content_for :content do %>
+  <%= javascript_include_tag 'dashboard_access_control_management' %>
+<% end %>

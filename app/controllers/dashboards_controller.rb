@@ -11,12 +11,37 @@ class DashboardsController < ApplicationController
     @title = t(:user_management)
     @main_menu = t(:user_management)
     @current_user = current_user
+    @users = User.all
+
   end
 
   def access_control_management
     @title = t(:access_control)
     @main_menu = t(:access_control)
     @current_user = current_user
+    Rails.application.eager_load!
+    @models = ActiveRecord::Base.descendants
+    @models.delete_at(0)
+    @models.delete_at(0)
+    @roles = Role.all
+    @users = User.all    
+    
+  end
+
+  def get_models
+    Rails.application.eager_load!
+    @models = ActiveRecord::Base.descendants
+    @models.delete_at(0)
+    @models.delete_at(0)
+    response = {}
+    @models.each do |model|
+      if model.name == "User"
+        response[model.name] = model.column_names[0, 14].to_json
+      else 
+        response[model.name] = model.column_names.to_json
+      end
+    end
+    render json: response
   end
 
   def add_content

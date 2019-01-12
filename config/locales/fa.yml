@@ -23,6 +23,10 @@ fa:
   editorial: "ویراستاری"
   user_management: "مدیریت کاربران"
   access_control: "مدیریت دسترسی‌ها"
+  roles: "نقش‌ها"
+  segments: "بخش‌ها"
+  accesses: "دسترسی‌ها"
+  name: "نام"
   menu: "منو"
   devise:
     confirmations:

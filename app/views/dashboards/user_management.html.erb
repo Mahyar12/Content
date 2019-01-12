@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">      
+    <div class="card"> 
+      <h5 class="card-header"><%= t(:accesses) %></h5>
+      <div class="card-body">       
+        <table id="users"
+           data-toggle="table"
+           data-height="500"
+           data-pagination="false"
+           data-search="true"
+          >
+          <thead>
+          <tr>
+            <th data-field="id">Name</th>
+            <th data-field="first_name">Name</th>
+            <th data-field="last_name">Name</th>
+            <th data-field="image">Name</th>
+            <th data-field="phone_number">Name</th>
+            <th data-field="country">Name</th>
+            <th data-field="province">Name</th>
+            <th data-field="city">Name</th>
+            <th data-field="email">Name</th>
+            <th data-field="username">Name</th>
+            <th data-field="description">Name</th>
+            <th data-field="address">Name</th>
+            <th data-field="created_at">Name</th>
+            <th data-field="updated_at">Name</th>
+            <th data-field="action" data-formatter="deleteFormatter" data-events="deleteEvents"><center><i class="fas fa-edit" style="font-size: 15px;"></i> Delete</center></th>
+          </tr>
+          </thead>  
+        </table>  
+      </div>
+    </div>
+  </div>
+  </div>
+</div>   
+
+<% content_for :content do %>
+  <%= javascript_include_tag 'dashboard_user_management' %>
+<% end %>

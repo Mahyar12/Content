@@ -116,3 +116,30 @@
   padding-right: .5rem;
   content: "\f104";
 }
+
+.rtl .fixed-table-container thead th:first-child:not([data-not-first-th]) {
+  border-left: 1px solid #ddd;
+}
+
+.rtl .fixed-table-container tbody td:first-child {
+  border-left: 1px solid #ddd;
+}
+
+.rtl .horizontal-line{
+  border-right: 1px solid #ddd; 
+  border-left: none;
+}
+
+.horizontal-line{
+    border-left: 1px solid #ddd;
+    border-right: none;
+
+}
+
+.rtl .dropdown-menu {
+  text-align: right;
+}
+
+.rtl .bootstrap-table td a.active{
+  color: #ff407b;
+}
