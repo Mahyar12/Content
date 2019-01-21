@@ -10,6 +10,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( dashboard.js )
 Rails.application.config.assets.precompile += %w( dashboard_access_control_management.js )
 Rails.application.config.assets.precompile += %w( dashboard_user_management.js )
+Rails.application.config.assets.precompile += %w( Dialog.js )
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.

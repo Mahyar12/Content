@@ -24,5 +24,6 @@ Rails.application.routes.draw do
   get 'dashboard/my_contents', to: 'dashboards#my_contents'
   get 'dashboard/editorial', to: 'dashboards#editorial'
   get '/models', to: 'dashboards#get_models'
+  post '/dashboard/update_permissions', to: 'permissions#update_permissions'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

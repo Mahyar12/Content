@@ -32,6 +32,7 @@ fa:
   add_content: "افزودن محتوا"
   abstract: "چکیده"
   content: "متن کامل"
+  record: "ثبت"
   devise:
     confirmations:
       confirmeمd: "ایمیل شما با موفقیت تایید شد."

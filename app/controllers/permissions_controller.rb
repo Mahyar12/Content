@@ -36,6 +36,17 @@ class PermissionsController < ApplicationController
       end
     end
   end
+  
+  def update_permissions
+    params[:permissions].each do |permission|
+      p = Permission.find(permission[:id])
+      p.update(access: permission[:access])
+    end
+    respond_to do |format|
+      # format.html { redirect_to :show, notice: 'Role was successfully created.' }
+      format.json { render json: {result: "OK"}, status: 200 }
+    end
+  end
 
   # PATCH/PUT /permissions/1
   # PATCH/PUT /permissions/1.json

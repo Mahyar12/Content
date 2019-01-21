@@ -19,6 +19,12 @@
 </div> 
 <div class="row">
   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+  <button class="btn btn-primary" id="record-access"><%= t(:record) %></button><br><br>
+</div>
+</div>
+<div class="row">
+
+  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
     <div class="card"> 
       <h5 class="card-header"><%= t(:roles) %><a data-dialog="somedialog" href="javascript:void(0)" id="add-role" class="add-item"><i class="fa fa-plus"> </i> </a></h5>
       <div class="card-body">       
@@ -81,6 +87,8 @@
   </div>
 </div>
 
+
 <% content_for :content do %>
+  <%= javascript_include_tag 'Dialog' %>
   <%= javascript_include_tag 'dashboard_access_control_management' %>
 <% end %>
