@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
+  post '/images/upload' => 'images#upload'
   resources :articles_tags
   resources :articles_categories
   resources :roles_users
@@ -25,5 +26,6 @@ Rails.application.routes.draw do
   get 'dashboard/editorial', to: 'dashboards#editorial'
   get '/models', to: 'dashboards#get_models'
   post '/dashboard/update_permissions', to: 'permissions#update_permissions'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -24,8 +24,9 @@ class ImagesController < ApplicationController
   def upload 
     if params.has_key?(:images)
       @files = []
+      article = Article.find(params[:article_id])
       params[:images].each do |image|
-        i = Image.new(name: image.original_filename)
+        i = article.images.new(address: image.original_filename)
         i.save!
         i.image.attach(
           io: image,

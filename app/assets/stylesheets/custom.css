@@ -150,8 +150,58 @@
   left: 15px;
 }
 
+.rtl .flexdatalist-multiple li.value {
+  float: right;
+}
+
+.rtl .flexdatalist-multiple li.input-container, .flexdatalist-multiple li.input-container input {
+  float: right;
+}
+
+.flexdatalist-multiple {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #71748d;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d2d2e4 !important;
+  border-radius: 2px !important;
+  cursor: pointer;
+}
+
+.flexdatalist-multiple:focus {
+  color: #71748d;
+  background-color: #fff;
+  border-color: #a7a7f0 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(214, 214, 255, .75);
+}
+
+.flexdatalist-multiple:hover {
+  color: #71748d;
+  background-color: #fff;
+  border-color: #a7a7f0 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(214, 214, 255, .75);
+}
+
 .add-item{
   position: absolute;
   top: 13px;
   right: : 15px;
+}
+
+select.form-control {
+  cursor: pointer;
+
+}
+
+select.form-control:hover {
+    color: #71748d;
+    background-color: #fff;
+    border-color: #a7a7f0;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(214, 214, 255, .75);  
 }

@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">      
+    <div class="card"> 
+      <h5 class="card-header"><%= t(:accesses) %></h5>
+      <div class="card-body">       
+        <table id="my-contents"
+           data-toggle="table"
+           data-height="500"
+           data-pagination="false"
+           data-search="true"
+          >
+          <thead>
+          <tr>
+            <th data-field="id">id</th>
+            <th data-field="abstract">Abstract</th>
+            <th data-field="content">Content</th>
+            <th data-field="status">Status</th>
+            <th data-field="action" data-formatter="accessFormatter" data-events="accessEvents"><center><i class="fas fa-edit" style="font-size: 15px;"></i>دسترسی‌ها </center></th>
+          </tr>
+          </thead>  
+        </table>  
+      </div>
+    </div>
+  </div>
+  </div>
+</div>   
+
+<% content_for :content do %>
+  <%= javascript_include_tag 'dashboard_my_content' %>
+<% end %>

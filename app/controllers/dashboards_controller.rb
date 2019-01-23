@@ -48,6 +48,7 @@ class DashboardsController < ApplicationController
     @title = t(:add_content)
     @main_menu = t(:content_managment)
     @submenu = t(:add_content)
+    @categories = Category.all
     @current_user = current_user
   end
 
